@@ -71,7 +71,8 @@
 	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
 	<div class="fh5co-slider">
 		<div class="owl-carousel owl-carousel-fullwidth">
-		    <div class="item" style="background-image:url(/C_HomePage/Public/Home/images/slide_1.jpg)">
+
+		    <!-- <div class="item" style="background-image:url(/C_HomePage/Public/Home/images/slide_1.jpg)">
 		    	<div class="fh5co-overlay"></div>
 		    	<div class="container">
 		    		<div class="row">
@@ -116,21 +117,40 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="item" style="background-image:url(/C_HomePage/Public/Home/images/slide_4.jpg)">
+
+			<div class="item" style="background-image:url(/C_HomePage/Public/<?php echo ($vo["slide_pic"]); ?>})">
 		    	<div class="fh5co-overlay"></div>
 		    	<div class="container">
 		    		<div class="row">
 		    			<div class="col-md-8 col-md-offset-2">
 			    			<div class="fh5co-owl-text-wrap">
 						    	<div class="fh5co-owl-text text-center to-animate">
-						    		<h1 class="fh5co-lead">Creative Folks</h1>
-									<h2 class="fh5co-sub-lead">Booster is a free responsive HTML5 template using bootstrap released under Creative Commons 3.0. Lovely crafted by More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h2>
+						    		<h1 class="fh5co-lead"><?php echo ($vo["slide_name"]); ?>}</h1>
+									<h2 class="fh5co-sub-lead"><?php echo ($vo["slide_content"]); ?>}</h2>
 						    	</div>
 						    </div>
 					    </div>
 		    		</div>
 		    	</div>
-		    </div>
+		    </div>		 -->
+
+			<?php if(is_array($slide)): $i = 0; $__LIST__ = $slide;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="item" style="background-image:url(/C_HomePage/Public/<?php echo ($vo["slide_pic"]); ?>)">
+			    	<div class="fh5co-overlay"></div>
+			    	<div class="container">
+			    		<div class="row">
+			    			<div class="col-md-8 col-md-offset-2">
+				    			<div class="fh5co-owl-text-wrap">
+							    	<div class="fh5co-owl-text text-center to-animate">
+							    		<h1 class="fh5co-lead"><?php echo ($vo["slide_name"]); ?></h1>
+										<h2 class="fh5co-sub-lead"><?php echo ($vo["slide_content"]); ?></h2>
+							    	</div>
+							    </div>
+						    </div>
+			    		</div>
+			    	</div>
+			    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+		    
 		</div>
 	</div>	
 	<div id="fh5co-main">

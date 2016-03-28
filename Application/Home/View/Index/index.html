@@ -63,7 +63,6 @@
 					<ul class="nav navbar-nav navbar-right">
 						<volist name='nav' id='vo'>
 							<li class="active"><a href="{$vo.href}"><span>{$vo.label}<span class="border"></span></span></a></li>
-
 						</volist>
 					</ul>
 				</div>
@@ -74,66 +73,25 @@
 	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
 	<div class="fh5co-slider">
 		<div class="owl-carousel owl-carousel-fullwidth">
-		    <div class="item" style="background-image:url(__PUBLIC__/Home/images/slide_1.jpg)">
-		    	<div class="fh5co-overlay"></div>
-		    	<div class="container">
-		    		<div class="row">
-		    			<div class="col-md-8 col-md-offset-2">
-			    			<div class="fh5co-owl-text-wrap">
-						    	<div class="fh5co-owl-text text-center to-animate">
-						    		<h1 class="fh5co-lead">Booster Studio</h1>
-									<h2 class="fh5co-sub-lead">Booster is a free responsive HTML5 template using bootstrap released under Creative Commons 3.0. Lovely crafted by More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h2>
-						    	</div>
+
+			<volist name='slide' id='vo'>
+				<div class="item" style="background-image:url(__PUBLIC__/{$vo.slide_pic})">
+			    	<div class="fh5co-overlay"></div>
+			    	<div class="container">
+			    		<div class="row">
+			    			<div class="col-md-8 col-md-offset-2">
+				    			<div class="fh5co-owl-text-wrap">
+							    	<div class="fh5co-owl-text text-center to-animate">
+							    		<h1 class="fh5co-lead">{$vo.slide_name}</h1>
+										<h2 class="fh5co-sub-lead">{$vo.slide_content}</h2>
+							    	</div>
+							    </div>
 						    </div>
-					    </div>
-		    		</div>
-		    	</div>
-		    </div>
-		    <div class="item" style="background-image:url(__PUBLIC__/Home/images/slide_2.jpg)">
-		    	<div class="fh5co-overlay"></div>
-		    	<div class="container">
-		    		<div class="row">
-		    			<div class="col-md-8 col-md-offset-2">
-			    			<div class="fh5co-owl-text-wrap">
-						    	<div class="fh5co-owl-text text-center to-animate">
-						    		<h1 class="fh5co-lead">A Digital Studio</h1>
-									<h2 class="fh5co-sub-lead">Booster is a free responsive HTML5 template using bootstrap released under Creative Commons 3.0. Lovely crafted by More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h2>
-						    	</div>
-						    </div>
-					    </div>
-		    		</div>
-		    	</div>
-		    </div>
-		    <div class="item" style="background-image:url(__PUBLIC__/Home/images/slide_3.jpg)">
-		    	<div class="fh5co-overlay"></div>
-		    	<div class="container">
-		    		<div class="row">
-		    			<div class="col-md-8 col-md-offset-2">
-			    			<div class="fh5co-owl-text-wrap">
-						    	<div class="fh5co-owl-text text-center to-animate">
-						    		<h1 class="fh5co-lead">Branding, UX under in one roof</h1>
-									<h2 class="fh5co-sub-lead">Booster is a free responsive HTML5 template using bootstrap released under Creative Commons 3.0. Lovely crafted by More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h2>
-						    	</div>
-						    </div>
-					    </div>
-		    		</div>
-		    	</div>
-		    </div>
-		    <div class="item" style="background-image:url(__PUBLIC__/Home/images/slide_4.jpg)">
-		    	<div class="fh5co-overlay"></div>
-		    	<div class="container">
-		    		<div class="row">
-		    			<div class="col-md-8 col-md-offset-2">
-			    			<div class="fh5co-owl-text-wrap">
-						    	<div class="fh5co-owl-text text-center to-animate">
-						    		<h1 class="fh5co-lead">Creative Folks</h1>
-									<h2 class="fh5co-sub-lead">Booster is a free responsive HTML5 template using bootstrap released under Creative Commons 3.0. Lovely crafted by More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></h2>
-						    	</div>
-						    </div>
-					    </div>
-		    		</div>
-		    	</div>
-		    </div>
+			    		</div>
+			    	</div>
+			    </div>			
+			</volist>
+
 		</div>
 	</div>	
 	<div id="fh5co-main">
