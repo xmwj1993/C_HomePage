@@ -61,10 +61,7 @@
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index.html"><span>HomePage <span class="border"></span></span></a></li>
-						<li><a href="right-sidebar.html"><span>Right Sidebar <span class="border"></span></span></a></li>
-						<li><a href="left-sidebar.html"><span>Left Sidebar <span class="border"></span></span></a></li>
-						<li><a href="elements.html"><span>Elements <span class="border"></span></span></a></li>
+						<?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="active"><a href="<?php echo ($vo["href"]); ?>"><span><?php echo ($vo["label"]); ?><span class="border"></span></span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 			</div>
